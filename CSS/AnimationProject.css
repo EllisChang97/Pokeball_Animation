@@ -1,0 +1,275 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+header {
+    position: relative;
+    width: 100%;
+    height: 5em;
+    background-color: #3B4CCA;
+}
+
+nav{
+    border: 1px solid #3B4CCA;
+}
+
+nav > ul {
+    list-style: none;
+    display: flex;
+    gap: 4em;
+    margin-left: 30px;
+    margin-top: 20px;
+
+}
+
+nav > ul > li > a {
+    text-decoration: none;
+    font-size: 30px;
+    color: #FF0000;
+
+}
+
+#sky-container {
+    background-color: #87ceeb;
+    height: 50vh;
+    width: 100vw;
+    /* border: 1px solid orange; */
+}
+
+#sky-container > h1 {
+    position: relative;
+    z-index: 1;
+    top: -200px;
+    
+}
+
+#cloud-1{
+    transform: scale(.5);
+    position: relative;
+    top: -230px;   
+    left: -530px; 
+    /* border: 1px solid green; */
+    animation: cloud-move;
+    animation-duration: 100s;
+    animation-fill-mode: both;
+    transition-timing-function: linear;
+}
+
+#grass-container {
+    /* border-radius: 50px; */
+    /* border: 1px solid red; */
+    height: 40vh;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    background-color: #00A619;
+}
+
+#welcome-message {
+    text-align:center;
+    color: black;
+    /* border: 1px solid red; */
+    margin-top: 1.5em;
+    
+}
+
+#grass-container > p {
+    text-align: center;
+    font-size: 40px;
+    margin-top: 1.5em;
+    display: none;
+}
+
+.flip-message {
+    animation: flip-message;
+    animation-duration: 2s;
+}
+
+#pokeball-container {
+    display: flex;
+    justify-content: center;
+    gap: 10em;
+    margin-top: -5em;
+    /* border: 1px solid red; */
+}
+
+/* .pokeball{
+    width: 200px;
+    height: 200px;
+} */
+
+#pika-pokeball {
+    /* border: 1px solid red; */
+    
+
+}
+
+.pokeball:hover{
+    transform: scale(1.2);
+}
+/* #pika-pokeball:hover{
+    transform: scale(1.2);
+} */
+#pokeball-1{
+    /* left: 20vw; */
+    z-index : 2;
+    width: 200px;
+    height: 200px;
+}
+
+
+#pikachu {
+    position: relative;    
+    width: 30px;
+    height: 30px;
+    top: -120px;
+    left: -100px;
+    /* left: 20vw; */
+    z-index : 0;
+    display: none;
+}
+
+
+
+#eevee-pokeball {
+    /* border: 1px solid red; */
+    
+}
+
+/* #eevee-pokeball:hover{
+    transform: scale(1.2);
+} */
+
+#pokeball-2{
+    /* left: 30vw; */
+    width: 200px;
+    height: 200px;
+}
+
+#eevee {
+    position: relative;    
+    width: 20px;
+    height: 30px;
+    top: -120px;
+    left: -100px;
+    display: none;
+    /* z-index: -1; */
+}
+
+
+#pokeball-3{
+    /* left: 40vw; */
+    width: 200px;
+    height: 200px;
+}
+
+#turtwig {
+    position: relative;    
+    width: 20px;
+    height: 30px;
+    top: -120px;
+    left: -100px;
+    /* z-index: -1; */
+    display: none;
+}
+
+.rotate {
+    transition: 1.5s;
+    transform: rotate(1080deg);
+}
+
+.grow {
+    animation: pokemon-grow;
+    animation-duration: 2s;
+    animation-fill-mode: both;
+
+}
+
+.move-to-left {
+    animation: move-to-left;
+    animation-duration: 2s;
+    animation-fill-mode: both;
+
+}
+
+.pokeball-spin {
+    animation: pokeball-spin;
+    animation-duration: 2s;
+}
+
+#button-container {
+    /* position: absolute; */
+    /* margin-left: auto; */
+    /* border: 1px solid red; */
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+#refresh-button {
+    display: none;
+}
+
+@keyframes cloud-move{
+    0% {
+        top: -150px;   
+        left: -530px; 
+    }
+
+    100% {
+        top: -150px;   
+        left: 1325px; 
+    }
+}
+
+@keyframes pokemon-grow{
+    0% {
+        transform: scale(1);
+        top: -120px;
+        left: -100px;
+    }
+
+    100% {
+        transform: scale(10);
+        /* top: 150px; */
+        left: 350px;
+        /* display: none; */
+    }
+}
+
+
+@keyframes move-to-left{
+        0% {
+            margin-left: 0px;
+        }
+    
+        100% {
+            margin-left: -500px;
+        }
+}
+
+
+@keyframes pokeball-spin{
+    0% {
+       
+    }
+
+    100% {
+        transform: rotate(1080deg);
+    }
+}
+
+
+@keyframes flip-message{
+    0% {
+       font-size: 1px;
+    }
+
+    100% {
+        font-size: 40px;
+        transform: rotateX(1080deg);
+    }
+}
+
